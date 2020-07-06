@@ -1,8 +1,6 @@
 %% Initialization
 clear ; close all; clc
-addpath ("peterkovesi/")
 
-pkg load image
 
 
 % load image files in folder
@@ -14,7 +12,7 @@ endfor
 
 
 for i=1:numel(files)
-	process_image(files{i}, strcat("../images/output/6_8_20_harris_v1/", names{i}, ".png") );
+	process_image(files{i}, strcat("../images/output/6_8_20_harris_v2/", names{i}, ".png") );
 
 endfor
 

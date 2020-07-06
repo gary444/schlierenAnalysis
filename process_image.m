@@ -1,5 +1,9 @@
 function process_image(path, out_path)
 
+addpath ("peterkovesi/")
+
+pkg load image
+
 
 img_in = rgb2gray(imread(path));  
 
@@ -10,9 +14,9 @@ img_in = rgb2gray(imread(path));
 % figure('Name', 'Yg')
 % imshow(gy)
 
-sigma = 2;
+sigma = 1;
 k = 0.04;
-cim = harris(img_in, sigma, k);
+[cim, r , c] = harris(img_in, sigma, k, 'radius', 3);
 % figure('Name', 'cornerness')
 % imshow(cim)
 
@@ -20,7 +24,7 @@ cim = harris(img_in, sigma, k);
 % [r,c] = nonmaxsuppts(cim, 'im', img_in);
 
 
-[r,c] = nonmaxsuppts(cim);
+% [r,c] = nonmaxsuppts(cim);
 
 
 
