@@ -29,15 +29,6 @@ cim = harris(img_in, sigma, k);
 
 
 
-% edge = 250;
-% img_in = img_in(:,edge:1280-edge);
-
-% [Xg,Yg] = go_gaussian(img_in, 1, 0.5);
-% figure('Name', 'Xg')
-% imshow(Xg)
-% figure('Name', 'Yg')
-% imshow(Yg)
-
 % negX = (Xg == 0);
 % imshow(negX)
 
